@@ -11,6 +11,7 @@ buildscript {
 plugins {
   id 'maven-publish'
   id 'signing'
+  id "org.sonarqube" version "7.2.3.7755"
   alias(libs.plugins.jacocolog)
   alias(libs.plugins.dependency.license.report)
   alias(libs.plugins.spotless)
@@ -117,4 +118,11 @@ licenseReport {
     new CsvReportRenderer('third-party-licenses.csv'),
     new InventoryHtmlReportRenderer('third-party-licenses.html')
   ]
+}
+
+sonar {
+  properties {
+    property "sonar.projectKey", "denis-troller-team_opentcs"
+    property "sonar.organization", "denis-troller-team"
+  }
 }
