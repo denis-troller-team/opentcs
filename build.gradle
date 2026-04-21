@@ -14,7 +14,6 @@ plugins {
   id "org.sonarqube" version "7.2.3.7755"
   alias(libs.plugins.jacocolog)
   alias(libs.plugins.dependency.license.report)
-  alias(libs.plugins.spotless)
   alias(libs.plugins.gradle.nexus.publish.plugin)
 }
 

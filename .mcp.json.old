@@ -1,0 +1,23 @@
+{
+  "mcpServers": {
+    "sonarqube-mcp-server": {
+      "command": "docker",
+      "args": [
+        "run", "-i", "--rm", "--pull=always",
+        "-e", "SONARQUBE_URL",
+        "-e", "SONARQUBE_TOKEN",
+        "-e", "SONARQUBE_ORG",
+        "-e", "SONARQUBE_PROJECT_KEY",
+        "-e", "SONARQUBE_TOOLSETS",
+        "-v", "/Users/denis.troller/repos/opentcs:/app/mcp-workspace:rw",
+        "mcp/sonarqube"
+      ],
+      "env": {
+        "SONARQUBE_URL": "https://sonarcloud.io",
+        "SONARQUBE_ORG": "denis-troller-team",
+        "SONARQUBE_PROJECT_KEY": "denis-troller-team_opentcs",
+        "SONARQUBE_TOOLSETS": "analysis,projects"
+      }
+    }
+  }
+}

@@ -19,7 +19,6 @@ evaluationDependsOn(':opentcs-peripheralcommadapter-loopback')
 evaluationDependsOn(':opentcs-plantoverview-panel-loadgenerator')
 
 apply from: "${rootDir}/gradle/java-project.gradle"
-apply from: "${rootDir}/gradle/java-codequality.gradle"
 apply from: "${rootDir}/gradle/publishing-java.gradle"
 
 apply plugin: 'distribution'
